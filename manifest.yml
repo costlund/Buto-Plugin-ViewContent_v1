@@ -1,5 +1,8 @@
-version: '1.0'
+version: '1.1'
 history:
+  '1.1':
+    date: '2019-09-30'
+    description: 'Add update method.'
   '1.0':
     date: '2019-09-27'
     description: 'Manifest created.'

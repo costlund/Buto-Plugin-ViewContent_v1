@@ -64,3 +64,9 @@ To navigate back to previous view.
 ```
 PluginViewContent_v1.back();
 ```
+
+To update visible element.
+
+```
+PluginViewContent_v1.update();
+```

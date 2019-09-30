@@ -27,5 +27,18 @@ function PluginViewContent_v1(){
     this.all_hide();
     $('#'+this.views[this.views.length-1].id).show();
   }
+  this.update = function(){
+    var has_one = false;
+    $(".plugin_view_content").each(function(){
+      if($(this).css("display")=="block"){
+        PluginWfAjax.update(this.id);
+        has_one = true;
+      }
+    });
+    if(!has_one){
+      alert('Could not find any visible element!');
+    }
+    return null;
+  }
 }
 var PluginViewContent_v1 = new PluginViewContent_v1();
