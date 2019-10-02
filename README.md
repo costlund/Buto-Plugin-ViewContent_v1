@@ -1,5 +1,6 @@
 # Buto-Plugin-ViewContent_v1
 
+Handle views on a page.
 
 ## Settings
 
