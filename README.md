@@ -71,3 +71,12 @@ To update visible element.
 ```
 PluginViewContent_v1.update();
 ```
+
+One could also load without url parameter to just show content.
+
+```
+PluginViewContent_v1.show_one('load_customer_customer');
+```
+
+
+
