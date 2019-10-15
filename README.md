@@ -19,21 +19,16 @@ data:
 
 ### Element
 
-All views must have class plugin_view_content and first view in a series should also have class plugin_view_content_start.
+All views will have class plugin_view_content and first view in a series will also have class plugin_view_content_start.
+
+Views will be added dynamic on method show_one. If first view is start of a series of view one should add true as last parameter of three.
 
 ```
 -
   type: div
   attribute:
-    class: plugin_view_content plugin_view_content_start
-    id: load_customer_customers
-  innerHTML: Customers...
--
-  type: div
-  attribute:
-    class: plugin_view_content
-    id: load_customer_customer
-  innerHTML: Customer...
+    id: plugin_view_contents
+  innerHTML:
 ```
 
 One could style views.
@@ -56,7 +51,7 @@ One could style views.
 Add this script to load each view.
 
 ```
-PluginViewContent_v1.show_one('load_customer_customers', '/customer/customers');
+PluginViewContent_v1.show_one('load_customer_customers', '/customer/customers', true);
 PluginViewContent_v1.show_one('load_customer_customer', '/customer/customer/id/1');
 ```
 

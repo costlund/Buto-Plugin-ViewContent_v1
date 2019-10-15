@@ -8,13 +8,41 @@ function PluginViewContent_v1(){
     $('.theme_content').show();
     return null;
   }
-  this.show_one = function(id, url){
+  this.show_one = function(id, url, start){
+    /**
+     * Clear views from history.
+     */
     if($('#'+id).hasClass('plugin_view_content_start')){
       this.clearViews();
     }
+    /**
+     * Set view.
+     */
     this.views.push({id: id, url: url, start: $('#'+id).hasClass('plugin_view_content_start')});
+    /**
+     * Hide all views.
+     */
     this.all_hide();
+    /**
+     * Add view if not exist.
+     */
+    if(!$('#'+id).length){
+      var div = document.createElement('div');
+      div.id = id;
+      if(start){
+        div.setAttribute('class', 'plugin_view_content plugin_view_content_start')
+      }else{
+        div.setAttribute('class', 'plugin_view_content')
+      }
+      $('#plugin_view_contents').append(div);
+    }
+    /**
+     * Show element.
+     */
     $('#'+id).show();
+    /**
+     * Load element with Ajax.
+     */
     if(url){
       PluginWfAjax.load(id, url);
     }
