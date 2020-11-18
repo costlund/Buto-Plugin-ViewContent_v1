@@ -2,7 +2,7 @@ version: '1.2'
 history:
   '1.2':
     date: '2019-10-15'
-    title: Dynamic views
+    title: 'Dynamic views'
     description: 'Add views dynamic.'
   '1.1':
     date: '2019-09-30'
@@ -13,10 +13,10 @@ history:
 plugin:
   -
     name: wf/embed
-    version: '1.0'
+    version: 1.1.0
   -
     name: wf/ajax
-    version: '1.2'
+    version: 1.4.1
 sys:
   -
     name: mercury
