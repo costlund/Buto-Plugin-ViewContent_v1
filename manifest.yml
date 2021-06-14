@@ -1,13 +1,17 @@
-version: '1.2'
+version: 1.3.0
 history:
-  '1.2':
+  1.3.0:
+    date: '2021-06-14'
+    title: 'Class'
+    description: 'Add class plugin_view_content, plugin_view_content_start if not set.'
+  1.2.0:
     date: '2019-10-15'
     title: 'Dynamic views'
     description: 'Add views dynamic.'
-  '1.1':
+  1.1.0:
     date: '2019-09-30'
     description: 'Add update method.'
-  '1.0':
+  1.0.0:
     date: '2019-09-27'
     description: 'Manifest created.'
 plugin:

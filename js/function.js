@@ -35,6 +35,15 @@ function PluginViewContent_v1(){
         div.setAttribute('class', 'plugin_view_content')
       }
       $('#plugin_view_contents').append(div);
+    }else{
+      if(!$('#'+id).hasClass('plugin_view_content')){
+        $('#'+id).addClass('plugin_view_content');
+      }
+      if(start){
+        if(!$('#'+id).hasClass('plugin_view_content_start')){
+          $('#'+id).addClass('plugin_view_content_start');
+        }
+      }
     }
     /**
      * Show element.
